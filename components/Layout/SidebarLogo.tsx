@@ -7,7 +7,7 @@ export const SidebarLogo = () => {
   return (
     <div
       onClick={() => router.push("/")}
-      className="rounded-full h-14 w-14 p-4 flex items-center justify-center hover:bg-slate-800 hover:bg-opacity-10 cursor-pointer transition"
+      className="flex h-14 w-14 cursor-pointer items-center justify-center rounded-full p-4 transition hover:bg-slate-200 hover:bg-opacity-10"
     >
       <GiSharpLips
         size={28}
