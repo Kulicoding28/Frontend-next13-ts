@@ -1,4 +1,5 @@
 import { Header } from "@/components/Header";
+import PostFeed from "@/components/posts/PostFeed";
 import UserHero from "@/components/users/UserHero";
 import useUser from "@/hooks/useUser";
 import { useRouter } from "next/router";
@@ -32,6 +33,7 @@ const UserView = () => {
 
       <UserHero userId={userId as string} />
       <UserBio userId={userId as string} />
+      <PostFeed userId={userId as string} />
     </>
   );
 };
