@@ -30,14 +30,14 @@ export default async function handler(
       throw new Error("Invalid ID");
     }
 
-    let updatedFollowingIds = [...(user.followingsIds || [])];
+    let updatedFollowingsIds = [...(user.followingsIds || [])];
 
     if (req.method === "POST") {
-      updatedFollowingIds.push(userId);
+      updatedFollowingsIds.push(userId);
     }
 
     if (req.method === "DELETE") {
-      updatedFollowingIds = updatedFollowingIds.filter(
+      updatedFollowingsIds = updatedFollowingsIds.filter(
         (followingId) => followingId !== userId
       );
     }
@@ -47,7 +47,7 @@ export default async function handler(
         id: currentUser.id,
       },
       data: {
-        followingsIds: updatedFollowingIds,
+        followingsIds: updatedFollowingsIds,
       },
     });
 
